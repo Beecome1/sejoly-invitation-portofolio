@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-head: "Poppins", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-brand-gold: #c5a059;
+  --color-brand-dark: #1e1e1e;
+  --color-brand-cream: #faf8f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
