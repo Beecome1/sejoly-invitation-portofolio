@@ -8,6 +8,10 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-green-300: oklch(87.1% 0.15 154.449);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-stone-100: oklch(97% 0.001 106.424);
     --color-stone-200: oklch(92.3% 0.003 48.717);
     --color-stone-300: oklch(86.9% 0.005 56.366);
@@ -302,9 +306,6 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
-  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -319,6 +320,9 @@
   }
   .mb-14 {
     margin-bottom: calc(var(--spacing) * 14);
+  }
+  .ml-auto {
+    margin-left: auto;
   }
   .block {
     display: block;
@@ -398,9 +402,6 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
-  }
   .w-auto {
     width: auto;
   }
@@ -461,6 +462,9 @@
   .resize {
     resize: both;
   }
+  .scroll-mt-16 {
+    scroll-margin-top: calc(var(--spacing) * 16);
+  }
   .list-none {
     list-style-type: none;
   }
@@ -473,6 +477,9 @@
   .grid-rows-\[1fr\] {
     grid-template-rows: 1fr;
   }
+  .grid-rows-\[2fr\] {
+    grid-template-rows: 2fr;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -484,6 +491,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -502,9 +512,6 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -563,12 +570,6 @@
   .border-stone-200 {
     border-color: var(--color-stone-200);
   }
-  .border-stone-200\/60 {
-    border-color: color-mix(in srgb, oklch(92.3% 0.003 48.717) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-stone-200) 60%, transparent);
-    }
-  }
   .border-stone-200\/70 {
     border-color: color-mix(in srgb, oklch(92.3% 0.003 48.717) 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -596,6 +597,9 @@
       border-color: color-mix(in oklab, var(--color-white) 15%, transparent);
     }
   }
+  .bg-\[\#62AB3B\] {
+    background-color: #62AB3B;
+  }
   .bg-\[\#A2AF7B\] {
     background-color: #A2AF7B;
   }
@@ -607,12 +611,6 @@
   }
   .bg-\[\#EEF3F8\] {
     background-color: #EEF3F8;
-  }
-  .bg-\[\#FF0069\] {
-    background-color: #FF0069;
-  }
-  .bg-\[EEF3F8\] {
-    background-color: EEF3F8;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -629,10 +627,10 @@
       background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
     }
   }
-  .bg-black\/50 {
-    background-color: color-mix(in srgb, #000 50%, transparent);
+  .bg-black\/45 {
+    background-color: color-mix(in srgb, #000 45%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+      background-color: color-mix(in oklab, var(--color-black) 45%, transparent);
     }
   }
   .bg-black\/85 {
@@ -649,15 +647,6 @@
   }
   .bg-brand-gold {
     background-color: var(--color-brand-gold);
-  }
-  .bg-brand-gold\/15 {
-    background-color: color-mix(in srgb, #c5a059 15%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-brand-gold) 15%, transparent);
-    }
-  }
-  .bg-green-300 {
-    background-color: var(--color-green-300);
   }
   .bg-stone-100 {
     background-color: var(--color-stone-100);
@@ -802,10 +791,6 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -820,9 +805,6 @@
   }
   .text-\[11px\] {
     font-size: 11px;
-  }
-  .text-\[14px\] {
-    font-size: 14px;
   }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
@@ -856,8 +838,14 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .text-\[\#A2AF7B\] {
-    color: #A2AF7B;
+  .text-\[\#62AB3B\] {
+    color: #62AB3B;
+  }
+  .text-\[\#077776\] {
+    color: #077776;
+  }
+  .text-\[\#A0E9DB\] {
+    color: #A0E9DB;
   }
   .text-\[\#D1F1FF\] {
     color: #D1F1FF;
@@ -870,6 +858,18 @@
   }
   .text-brand-gold {
     color: var(--color-brand-gold);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-600 {
+    color: var(--color-slate-600);
+  }
+  .text-slate-700 {
+    color: var(--color-slate-700);
+  }
+  .text-slate-800 {
+    color: var(--color-slate-800);
   }
   .text-stone-300 {
     color: var(--color-stone-300);
@@ -925,10 +925,6 @@
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-2xs {
-    --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-lg {
@@ -1042,9 +1038,6 @@
     .hover\:bg-\[\#A2AF7B\]:hover {
       background-color: #A2AF7B;
     }
-    .hover\:bg-black:hover {
-      background-color: var(--color-black);
-    }
     .hover\:bg-brand-dark:hover {
       background-color: var(--color-brand-dark);
     }
@@ -1077,6 +1070,21 @@
       .hover\:bg-white\/35:hover {
         background-color: color-mix(in oklab, var(--color-white) 35%, transparent);
       }
+    }
+    .hover\:text-\[\#7CFD9A\]:hover {
+      color: #7CFD9A;
+    }
+    .hover\:text-\[\#28D8A9\]:hover {
+      color: #28D8A9;
+    }
+    .hover\:text-\[\#216D6A\]:hover {
+      color: #216D6A;
+    }
+    .hover\:text-\[\#062958\]:hover {
+      color: #062958;
+    }
+    .hover\:text-\[\#077776\]:hover {
+      color: #077776;
     }
     .hover\:text-brand-gold:hover {
       color: var(--color-brand-gold);
