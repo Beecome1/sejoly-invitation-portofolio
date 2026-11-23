@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const catalogCards = document.querySelectorAll(".catalog-card");
 
-  const activeClasses = ["bg-amber-600", "text-white", "shadow-sm"];
+  const activeClasses = ["bg-[#A2AF7B]", "text-white", "shadow-sm"];
   const inactiveClasses = [
     "bg-stone-100",
     "text-stone-700",
