@@ -18,5 +18,14 @@
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beecome1/sejoly-invitation-portofolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beecome1/sejoly-invitation-portofolio/issues"
+  },
+  "homepage": "https://github.com/Beecome1/sejoly-invitation-portofolio#readme"
 }

@@ -326,172 +326,262 @@
       </section>
 
       <!-- SECTION 2: KATALOG PORTOFOLIO -->
-      <section id="katalog" class="py-16 md:py-24 px-4 sm:px-6 bg-[#C2CDD5]">
-        <div class="max-w-6xl mx-auto">
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+      <section id="katalog" class="py-16 px-4 max-w-6xl mx-auto bg-[#C2CDD5]">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-serif font-bold text-stone-800 mb-3">
+            Katalog Undangan Digital
+          </h2>
+          <p class="text-stone-600">
+            Pilih tema undangan sesuai konsep pernikahan impian Anda
+          </p>
+        </div>
+
+        <!-- Tombol Filter Kategori (Default: Adat & Tradisional) -->
+        <div
+          id="filter-buttons"
+          class="flex flex-wrap justify-center gap-3 mb-10"
+        >
+          <button
+            type="button"
+            data-filter="basic"
+            class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-amber-600 text-white shadow-sm cursor-pointer"
           >
-            <div>
-              <span class="text-sm font-semibold uppercase tracking-widest"
-                >Koleksi Desain</span
-              >
-              <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-1">
-                Pilihan Tema Portofolio
-              </h2>
-            </div>
-            <!-- Filter Kategori Sederhana -->
-            <div class="flex flex-wrap gap-2" id="filter-buttons">
-              <button
-                data-filter="all"
-                class="filter-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-dark text-white transition"
-              >
-                Semua
-              </button>
-              <button
-                data-filter="adat"
-                class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white border border-stone-200 text-stone-600 hover:border-brand-dark transition"
-              >
-                Adat & Tradisional
-              </button>
-              <button
-                data-filter="modern"
-                class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white border border-stone-200 text-stone-600 hover:border-brand-dark transition"
-              >
-                Modern Minimalis
-              </button>
-            </div>
-          </div>
+            Basic
+          </button>
 
-          <div
-            class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-            id="portfolio-grid"
+          <button
+            type="button"
+            data-filter="floral"
+            class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-stone-100 text-stone-700 hover:bg-stone-200 cursor-pointer"
           >
-            <!-- Item 1 -->
-            <article
-              data-category="adat"
-              class="portfolio-item group bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition"
-            >
-              <div class="aspect-4/3 bg-stone-200 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
-                  alt="Tema Adat Batak"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                />
-                <span
-                  class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-semibold px-2.5 py-1 rounded-full"
-                  >Adat & Tradisional</span
-                >
-              </div>
-              <div class="p-6">
-                <h3 class="font-serif text-xl font-bold mb-1">
-                  Batak Heritage — Ulos & Gorga
-                </h3>
-                <p class="text-sm text-stone-500 mb-4">
-                  Ornamen Gorga Batak, motif Ulos Ragi Hotang, dan nuansa
-                  merah-emas elegan.
-                </p>
-                <div
-                  class="flex items-center justify-between pt-4 border-t border-stone-100"
-                >
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="text-sm font-semibold text-brand-gold hover:underline"
-                    >Live Demo &rarr;</a
-                  >
-                  <a
-                    href="#kontak"
-                    class="text-xs font-medium bg-stone-100 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded-lg transition"
-                    >Pilih Tema</a
-                  >
-                </div>
-              </div>
-            </article>
+            Floral &amp; Estetik
+          </button>
 
-            <!-- Item 2 -->
-            <article
-              data-category="modern"
-              class="portfolio-item group bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition"
-            >
-              <div class="aspect-4/3 bg-stone-200 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
-                  alt="Tema Minimalis"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                />
-                <span
-                  class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-semibold px-2.5 py-1 rounded-full"
-                  >Modern Minimalis</span
-                >
-              </div>
-              <div class="p-6">
-                <h3 class="font-serif text-xl font-bold mb-1">
-                  Ivory Editorial
-                </h3>
-                <p class="text-sm text-stone-500 mb-4">
-                  Layout bersih ala majalah pernikahan modern dengan tipografi
-                  serif klasik.
-                </p>
-                <div
-                  class="flex items-center justify-between pt-4 border-t border-stone-100"
-                >
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="text-sm font-semibold text-brand-gold hover:underline"
-                    >Live Demo &rarr;</a
-                  >
-                  <a
-                    href="#kontak"
-                    class="text-xs font-medium bg-stone-100 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded-lg transition"
-                    >Pilih Tema</a
-                  >
-                </div>
-              </div>
-            </article>
+          <button
+            type="button"
+            data-filter="minimalis"
+            class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-stone-100 text-stone-700 hover:bg-stone-200 cursor-pointer"
+          >
+            Minimalis Modern
+          </button>
+        </div>
 
-            <!-- Item 1 -->
-            <article
-              data-category="modern"
-              class="portfolio-item group bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition"
-            >
-              <div class="aspect-4/3 bg-stone-200 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
-                  alt="Tema Botanical"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                />
-                <span
-                  class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-semibold px-2.5 py-1 rounded-full"
-                  >Modern Minimalis</span
+        <!-- Grid Kartu Katalog -->
+        <div
+          id="catalog-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Kartu 1: Kategori Basic -->
+          <article
+            data-category="basic"
+            class="catalog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 transition-all duration-300"
+          >
+            <img
+              src="./assets/img/mockup-basic/basic-01.jpg"
+              alt="Tema Adat Batak"
+              loading="lazy"
+              class="w-full aspect-4/3 object-cover object-center"
+            />
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-stone-800 mt-2">
+                Warm Ivory & Gold
+              </h3>
+
+              <!-- Tombol Aksi (Atas: Live Demo, Bawah: Pesan WhatsApp) -->
+              <div class="mt-4 flex flex-col gap-2">
+                <a
+                  href="./dist/demo/basic/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
                 >
-              </div>
-              <div class="p-6">
-                <h3 class="font-serif text-xl font-bold mb-1">
-                  Sage Botanical
-                </h3>
-                <p class="text-sm text-stone-500 mb-4">
-                  Ilustrasi dedaunan lembut dengan palet warna sage green yang
-                  menenangkan.
-                </p>
-                <div
-                  class="flex items-center justify-between pt-4 border-t border-stone-100"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <span>Lihat Template</span>
+                </a>
+
+                <a
+                  href="https://wa.me/6281234567890?text=Halo%20Sejoly%20Invitation,%20saya%20tertarik%20pesan%20undangan%20digital%20tema%20*Ulos%20Gorga%20Gold*."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2"
                 >
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="text-sm font-semibold text-brand-gold hover:underline"
-                    >Live Demo &rarr;</a
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-4 h-4"
                   >
-                  <a
-                    href="#kontak"
-                    class="text-xs font-medium bg-stone-100 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded-lg transition"
-                    >Pilih Tema</a
-                  >
-                </div>
+                    <path
+                      d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.458 3.474 1.328 4.988L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.914 9.914 0 0 0 19.08 4.918 9.903 9.903 0 0 0 12.031 2Zm5.822 14.274c-.246.693-1.428 1.326-1.976 1.409-.506.077-1.147.11-1.85-.114-.426-.135-.973-.316-1.673-.619-2.943-1.272-4.864-4.236-5.011-4.432-.147-.196-1.197-1.592-1.197-3.037 0-1.445.757-2.155 1.026-2.449.269-.294.587-.368.783-.368.196 0 .391.002.562.01.18.009.422-.068.66.504.245.588.832 2.032.905 2.179.074.147.123.318.025.514-.098.196-.147.318-.294.49-.147.171-.309.383-.441.514-.147.147-.3.306-.129.6.172.294.762 1.257 1.636 2.036 1.124 1.002 2.071 1.313 2.365 1.46.294.147.465.122.636-.074.172-.196.734-.857.93-1.151.196-.294.392-.245.661-.147.269.098 1.714.808 2.008.955.294.147.49.22.563.343.074.122.074.71-.172 1.403Z"
+                    />
+                  </svg>
+                  <span>Pesan</span>
+                </a>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
+
+          <!-- Kartu 2: Kategori Floral -->
+          <article
+            data-category="floral"
+            class="catalog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 transition-all duration-300"
+          >
+            <img
+              src="./assets/thumb-floral.webp"
+              alt="Tema Floral Gold"
+              loading="lazy"
+              class="w-full aspect-4/3 object-cover object-center"
+            />
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-rose-700 bg-rose-50 px-2.5 py-1 rounded-md"
+                >Floral &amp; Estetik</span
+              >
+              <h3 class="text-lg font-bold text-stone-800 mt-2">
+                Rustic Floral Cream
+              </h3>
+
+              <!-- Tombol Aksi -->
+              <div class="mt-4 flex flex-col gap-2">
+                <a
+                  href="./demo/floral-gold/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <span>Live Demo</span>
+                </a>
+
+                <a
+                  href="https://wa.me/6281234567890?text=Halo%20Sejoly%20Invitation,%20saya%20tertarik%20pesan%20undangan%20digital%20tema%20*Rustic%20Floral%20Cream*."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.458 3.474 1.328 4.988L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.914 9.914 0 0 0 19.08 4.918 9.903 9.903 0 0 0 12.031 2Zm5.822 14.274c-.246.693-1.428 1.326-1.976 1.409-.506.077-1.147.11-1.85-.114-.426-.135-.973-.316-1.673-.619-2.943-1.272-4.864-4.236-5.011-4.432-.147-.196-1.197-1.592-1.197-3.037 0-1.445.757-2.155 1.026-2.449.269-.294.587-.368.783-.368.196 0 .391.002.562.01.18.009.422-.068.66.504.245.588.832 2.032.905 2.179.074.147.123.318.025.514-.098.196-.147.318-.294.49-.147.171-.309.383-.441.514-.147.147-.3.306-.129.6.172.294.762 1.257 1.636 2.036 1.124 1.002 2.071 1.313 2.365 1.46.294.147.465.122.636-.074.172-.196.734-.857.93-1.151.196-.294.392-.245.661-.147.269.098 1.714.808 2.008.955.294.147.49.22.563.343.074.122.074.71-.172 1.403Z"
+                    />
+                  </svg>
+                  <span>Pesan</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kartu 3: Kategori Minimalis -->
+          <article
+            data-category="minimalis"
+            class="catalog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 transition-all duration-300"
+          >
+            <img
+              src="./assets/thumb-minimalis.webp"
+              alt="Tema Minimalis Sage"
+              loading="lazy"
+              class="w-full aspect-4/3 object-cover object-center"
+            />
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md"
+                >Minimalis Modern</span
+              >
+              <h3 class="text-lg font-bold text-stone-800 mt-2">
+                Sage Monogram
+              </h3>
+
+              <!-- Tombol Aksi -->
+              <div class="mt-4 flex flex-col gap-2">
+                <a
+                  href="./demo/minimalist-sage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <span>Live Demo</span>
+                </a>
+
+                <a
+                  href="https://wa.me/6281234567890?text=Halo%20Sejoly%20Invitation,%20saya%20tertarik%20pesan%20undangan%20digital%20tema%20*Sage%20Monogram*."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.458 3.474 1.328 4.988L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.914 9.914 0 0 0 19.08 4.918 9.903 9.903 0 0 0 12.031 2Zm5.822 14.274c-.246.693-1.428 1.326-1.976 1.409-.506.077-1.147.11-1.85-.114-.426-.135-.973-.316-1.673-.619-2.943-1.272-4.864-4.236-5.011-4.432-.147-.196-1.197-1.592-1.197-3.037 0-1.445.757-2.155 1.026-2.449.269-.294.587-.368.783-.368.196 0 .391.002.562.01.18.009.422-.068.66.504.245.588.832 2.032.905 2.179.074.147.123.318.025.514-.098.196-.147.318-.294.49-.147.171-.309.383-.441.514-.147.147-.3.306-.129.6.172.294.762 1.257 1.636 2.036 1.124 1.002 2.071 1.313 2.365 1.46.294.147.465.122.636-.074.172-.196.734-.857.93-1.151.196-.294.392-.245.661-.147.269.098 1.714.808 2.008.955.294.147.49.22.563.343.074.122.074.71-.172 1.403Z"
+                    />
+                  </svg>
+                  <span>Pesan</span>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 

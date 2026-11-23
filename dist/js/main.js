@@ -284,3 +284,56 @@ if (lightboxSwipeArea) {
     { passive: true },
   );
 }
+
+// 5. Logika Kategori Portofolio
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const catalogCards = document.querySelectorAll(".catalog-card");
+
+  const activeClasses = ["bg-amber-600", "text-white", "shadow-sm"];
+  const inactiveClasses = [
+    "bg-stone-100",
+    "text-stone-700",
+    "hover:bg-stone-200",
+  ];
+
+  function applyFilter(selectedFilter) {
+    // 1. Ubah warna tombol aktif
+    filterButtons.forEach((btn) => {
+      const btnFilter = btn.getAttribute("data-filter");
+      if (btnFilter === selectedFilter) {
+        btn.classList.remove(...inactiveClasses);
+        btn.classList.add(...activeClasses);
+      } else {
+        btn.classList.remove(...activeClasses);
+        btn.classList.add(...inactiveClasses);
+      }
+    });
+
+    // 2. Sembunyikan / tampilkan kartu langsung via properti bawaan browser
+    catalogCards.forEach((card) => {
+      const cardCategory = card.getAttribute("data-category");
+      if (cardCategory === selectedFilter) {
+        card.hidden = false;
+        card.style.display = "";
+      } else {
+        card.hidden = true;
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Event klik tombol filter
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedFilter = button.getAttribute("data-filter");
+      applyFilter(selectedFilter);
+    });
+  });
+
+  // Jalankan default saat halaman dibuka
+  if (filterButtons.length > 0) {
+    applyFilter("basic");
+  }
+});
