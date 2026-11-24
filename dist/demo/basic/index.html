@@ -60,21 +60,30 @@
         class="absolute inset-4 sm:inset-8 border border-amber-200/20 pointer-events-none"
       ></div>
 
-      <div class="relative z-10 max-w-md mx-auto space-y-6">
+      <div class="relative z-10 max-w-md mx-auto space-y-5">
         <p class="text-xs uppercase tracking-[0.35em] text-amber-200/80">
           The Wedding of
         </p>
 
+        <!-- Foto Lingkaran Mempelai -->
+        <div class="mx-auto w-52 h-52 sm:w-56 sm:h-56 rounded-full p-1">
+          <img
+            src="./assets/img/foto-sample.webp"
+            alt="Foto Mempelai"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+
         <h1
-          class="font-wedding text-5xl sm:text-6xl font-normal tracking-wide text-amber-50"
+          class="font-['Playfair_Display'] text-4xl sm:text-6xl font-normal tracking-wide text-amber-50"
         >
           Romeo
           <span class="italic font-light text-amber-300">&amp;</span> Juliet
         </h1>
 
-        <div class="w-12 h-px bg-amber-300/40 mx-auto"></div>
+        <div class="w-12 h-[1px] bg-amber-300/40 mx-auto"></div>
 
-        <div class="space-y-2 pt-2">
+        <div class="space-y-1.5 pt-1">
           <p class="text-xs text-stone-400">Kepada Yth. Bapak/Ibu/Saudara/i</p>
           <p
             id="guest-name"
@@ -84,7 +93,7 @@
           </p>
         </div>
 
-        <div class="pt-4">
+        <div class="pt-3">
           <button
             id="open-invitation-btn"
             class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-amber-100 text-stone-900 text-xs sm:text-sm font-medium tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-xl cursor-pointer"
