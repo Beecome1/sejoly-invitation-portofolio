@@ -66,7 +66,7 @@
         </p>
 
         <!-- Foto Lingkaran Mempelai -->
-        <div class="mx-auto w-52 h-52 sm:w-56 sm:h-56 rounded-full p-1">
+        <div class="mx-auto w-52 h-52 sm:w-56 sm:h-56 p-1">
           <img
             src="./assets/img/foto-sample.webp"
             alt="Foto Mempelai"
@@ -75,13 +75,13 @@
         </div>
 
         <h1
-          class="font-['Playfair_Display'] text-4xl sm:text-6xl font-normal tracking-wide text-amber-50"
+          class="font-wedding text-5xl sm:text-6xl font-normal tracking-wide text-amber-50"
         >
           Romeo
           <span class="italic font-light text-amber-300">&amp;</span> Juliet
         </h1>
 
-        <div class="w-12 h-[1px] bg-amber-300/40 mx-auto"></div>
+        <div class="w-12 h-px bg-amber-300/40 mx-auto"></div>
 
         <div class="space-y-1.5 pt-1">
           <p class="text-xs text-stone-400">Kepada Yth. Bapak/Ibu/Saudara/i</p>
@@ -96,7 +96,7 @@
         <div class="pt-3">
           <button
             id="open-invitation-btn"
-            class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-amber-100 text-stone-900 text-xs sm:text-sm font-medium tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-xl cursor-pointer"
+            class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-amber-100 text-stone-900 text-sm sm:text-sm font-medium tracking-wider hover:bg-white transition-all duration-300 shadow-xl cursor-pointer"
           >
             <svg
               class="w-4 h-4"
@@ -122,78 +122,57 @@
        ========================================================= -->
     <main
       id="main-content"
-      class="max-w-xl mx-auto bg-white shadow-sm min-h-screen border-x border-stone-200/60"
+      class="max-w-xl mx-auto bg-stone-900 shadow-sm min-h-screen border-x border-stone-200/60"
     >
-      <!-- Hero Section -->
+      <!-- Hero Section dengan Background Tag <img> -->
       <header
-        class="relative py-20 px-6 text-center bg-stone-100/70 border-b border-stone-200/60"
+        class="relative h-100svh flex flex-col items-center justify-center pb-50 text-center overflow-hidden border-b border-stone-200/60 px-10 sm:px-14"
       >
-        <p class="text-xs uppercase tracking-[0.3em] text-stone-500 mb-4">
-          We Are Getting Married
-        </p>
-        <h2
-          class="font-['Playfair_Display'] text-4xl sm:text-5xl text-stone-800 mb-3"
-        >
-          Romeo &amp; Juliet
-        </h2>
-        <p class="text-sm text-stone-500 tracking-widest uppercase">
-          Sabtu, 12 Desember 2026
-        </p>
+        <!-- Foto Mempelai sebagai Background -->
+        <img
+          src="./assets/img/hero-image.webp"
+          alt="Foto Mempelai Romeo & Juliet"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover object-center z-0 brightness-30"
+        />
 
-        <!-- Countdown Timer -->
-        <div
-          id="countdown"
-          class="grid grid-cols-4 gap-2 sm:gap-4 max-w-sm mx-auto mt-10"
-        >
-          <div
-            class="bg-white p-3 rounded-xl border border-stone-200/80 shadow-2xs"
+        <div class="absolute inset-0 z-10"></div>
+
+        <!-- Konten Teks Hero -->
+        <div class="relative z-20 space-y-3">
+          <p class="text-xs uppercase tracking-[0.3em] text-amber-200/90">
+            We Are Getting Married
+          </p>
+          <h2
+            class="font-['Playfair_Display'] text-4xl sm:text-5xl text-amber-50"
           >
-            <span
-              id="days"
-              class="block font-['Playfair_Display'] text-2xl sm:text-3xl font-semibold text-stone-800"
-              >00</span
+            Romeo
+            <span class="italic font-light text-amber-300">&amp;</span> Juliet
+          </h2>
+          <div class="w-10 h-px bg-amber-300/50 mx-auto my-2"></div>
+          <div class="pt-6 pb-10 space-y-2">
+            <p class="text-sm leading-relaxed text-stone-200/95">
+              &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+              menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar
+              kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan
+              di antaramu rasa kasih dan sayang.&rdquo;
+            </p>
+            <p
+              class="text-[11px] font-medium tracking-widest uppercase text-amber-300"
             >
-            <span class="text-[11px] uppercase tracking-wider text-stone-400"
-              >Hari</span
-            >
+              (QS. Ar-Rum: 21)
+            </p>
           </div>
-          <div
-            class="bg-white p-3 rounded-xl border border-stone-200/80 shadow-2xs"
+          <p
+            class="text-xs sm:text-sm text-stone-200 tracking-widest uppercase"
           >
-            <span
-              id="hours"
-              class="block font-['Playfair_Display'] text-2xl sm:text-3xl font-semibold text-stone-800"
-              >00</span
-            >
-            <span class="text-[11px] uppercase tracking-wider text-stone-400"
-              >Jam</span
-            >
-          </div>
-          <div
-            class="bg-white p-3 rounded-xl border border-stone-200/80 shadow-2xs"
-          >
-            <span
-              id="minutes"
-              class="block font-['Playfair_Display'] text-2xl sm:text-3xl font-semibold text-stone-800"
-              >00</span
-            >
-            <span class="text-[11px] uppercase tracking-wider text-stone-400"
-              >Menit</span
-            >
-          </div>
-          <div
-            class="bg-white p-3 rounded-xl border border-stone-200/80 shadow-2xs"
-          >
-            <span
-              id="seconds"
-              class="block font-['Playfair_Display'] text-2xl sm:text-3xl font-semibold text-stone-800"
-              >00</span
-            >
-            <span class="text-[11px] uppercase tracking-wider text-stone-400"
-              >Detik</span
-            >
-          </div>
+            Sabtu, 12 Desember 2026
+          </p>
         </div>
+        <sejoly-countdown
+          date="2026-12-20T08:00:00+07:00"
+          class="max-w-sm mx-auto mt-10"
+        ></sejoly-countdown>
       </header>
 
       <!-- Salam & Mempelai Section -->
@@ -334,5 +313,6 @@
 
     <!-- External JavaScript -->
     <script src="../basic/js/script.js"></script>
+    <script src="../../../dist/js/countdown.js"></script>
   </body>
 </html>
