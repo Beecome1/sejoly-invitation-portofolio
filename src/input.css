@@ -22,14 +22,44 @@
 }
 
 /* Utilitas Animasi Scroll */
-.reveal {
+/* Base Animasi Scroll */
+[data-anim] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
-.reveal.active {
+
+/* 1. Naik dari bawah (Default) */
+[data-anim="fade-up"] {
+  transform: translateY(32px);
+}
+
+/* 2. Masuk dari kiri (Cocok untuk Mempelai Pria / Kartu Akad) */
+[data-anim="fade-right"] {
+  transform: translateX(-100px);
+}
+
+/* 3. Masuk dari kanan (Cocok untuk Mempelai Wanita / Kartu Resepsi) */
+[data-anim="fade-left"] {
+  transform: translateX(100px);
+}
+
+/* 4. Membesar lembut (Cocok untuk Foto Lingkaran, Ayat Al-Qur'an, Countdown) */
+[data-anim="zoom-in"] {
+  transform: scale(0.3);
+}
+
+/* 5. Muncul halus di tempat (Cocok untuk Teks Salam / Penutup) */
+[data-anim="fade-in"] {
+  transform: none;
+}
+
+/* State Aktif saat masuk layar */
+[data-anim].is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
 /* Memastikan smooth scroll */

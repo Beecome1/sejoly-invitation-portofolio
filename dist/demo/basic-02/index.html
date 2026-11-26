@@ -39,7 +39,7 @@
       </p>
 
       <!-- Foto Mempelai Lingkaran di Tengah -->
-      <div class="relative mb-6 h-56 w-56 p-1.5 shadow-xl">
+      <div class="relative mb-6 h-56 w-56 p-1.5">
         <img
           id="foto-sampul"
           src=""
@@ -142,29 +142,39 @@
     <!-- 4. SECTION PROFIL MEMPELAI -->
     <section id="section-mempelai" class="bg-ivory px-6 py-20 text-center">
       <div class="mx-auto grid max-w-4xl gap-12 md:grid-cols-2">
-        <!-- Mempelai Pria -->
-        <div class="reveal flex flex-col items-center">
-          <div class="h-48 w-48 overflow-hidden">
+        <!-- Mempelai Wanita -->
+        <div class="flex flex-col items-center">
+          <div class="relative flex h-56 w-56 items-center justify-center">
             <img
-              id="foto-pria"
-              src=""
-              alt="Mempelai Pria"
-              class="h-full w-full rounded-t-full object-cover"
+              data-anim="zoom-in"
+              id="foto-wanita"
+              src="./assets/img/foto-mempelai-wanita.webp"
+              alt="Mempelai Wanita"
+              class="h-44 w-44 rounded-full object-cover"
+            />
+            <img
+              src="./assets/img/border-custom.webp"
+              alt=""
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 z-10 h-full w-full object-contain"
             />
           </div>
           <h3
+            data-anim="fade-right"
             id="nama-wanita"
             class="mt-5 font-wedding text-4xl font-semibold text-gold-dark"
           >
             Fatimah Putri
           </h3>
           <p
+            data-anim="fade-left"
             id="ortu-wanita"
             class="mt-2 text-sm leading-relaxed text-charcoal/80"
           >
             Putri Pertama dari Bapak H. Ridwan Kamil & Ibu Hj. Siti Aminah
           </p>
           <a
+            data-anim="zoom-in"
             id="ig-wanita"
             href="https://instagram.com"
             target="_blank"
@@ -184,29 +194,39 @@
           </a>
         </div>
 
-        <!-- Mempelai Wanita -->
-        <div class="reveal flex flex-col items-center">
-          <div class="h-48 w-48 overflow-hidden">
+        <!-- Mempelai Pria -->
+        <div class="flex flex-col items-center">
+          <div class="relative flex h-56 w-56 items-center justify-center">
             <img
-              id="foto-wanita"
-              src=""
-              alt="Mempelai Wanita"
-              class="h-full w-full rounded-t-full object-cover"
+              data-anim="zoom-in"
+              id="foto-pria"
+              src="./assets/img/foto-mempelai-pria.webp"
+              alt="Mempelai Pria"
+              class="h-44 w-44 rounded-full object-cover"
+            />
+            <img
+              src="./assets/img/border-custom.webp"
+              alt=""
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 z-10 h-full w-full object-contain"
             />
           </div>
           <h3
+            data-anim="fade-right"
             id="nama-pria"
             class="mt-5 font-wedding text-4xl font-semibold text-gold-dark"
           >
             Ahmad Fauzan
           </h3>
           <p
+            data-anim="fade-left"
             id="ortu-pria"
             class="mt-2 text-sm leading-relaxed text-charcoal/80"
           >
             Putra Kedua dari Bapak H. Abdullah & Ibu Hj. Khadijah
           </p>
           <a
+            data-anim="zoom-in"
             id="ig-pria"
             href="https://instagram.com"
             target="_blank"
@@ -474,7 +494,7 @@
     <script type="module" src="./js/data-undangan.js"></script>
     <script type="module" src="../../../dist/js/countdown.js"></script>
     <script type="module" src="./js/audio.js"></script>
-    <script type="module" src="./js/animasi.js"></script>
+    <script type="module" src="../../js/animasi.js"></script>
     <script type="module" src="./js/rsvp.js"></script>
   </body>
 </html>

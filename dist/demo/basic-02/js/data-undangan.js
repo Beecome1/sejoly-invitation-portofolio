@@ -3,12 +3,12 @@ export const DATA_UNDANGAN = {
   tanggalUtama: "Sabtu, 09 Januari 2027",
   targetCountdown: "2027-01-09T09:00:00+07:00",
   gambar: {
-    sampul: "./assets/img/foto-sample.webp",
+    sampul: "./assets/img/foto-sampul.webp",
     hero: "./assets/img/hero-image.webp",
   },
   wanita: {
     nama: "Fatimah Putri",
-    foto: "./assets/img/foto-sample.webp",
+    foto: "./assets/img/foto-mempelai-wanita.webp",
     ortu: "Putri Pertama dari Bapak Ridwan Kamil dan Ibu Siti Aminah",
     igUsername: "@fatimahpputri",
     igUrl: "https://instagram.com/fatimahapputri",
@@ -16,7 +16,7 @@ export const DATA_UNDANGAN = {
 
   pria: {
     nama: "Ahmad Fauzan",
-    foto: "./assets/img/foto-sample.webp",
+    foto: "./assets/img/foto-mempelai-wanita.webp",
     ortu: "Putra Kedua dari Bapak H. Abdullah & Ibu Hj. Khadijah",
     igUsername: "@fatimahazzahra",
     igUrl: "https://instagram.com/ahmadfauzan",
