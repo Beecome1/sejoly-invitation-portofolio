@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Wedding of Romeo & Juliet</title>
+    <title>The Wedding of Putri & Fahrul</title>
 
     <!-- Google Fonts: Playfair Display (Elegan) & Plus Jakarta Sans (Modern/Clean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
     <link href="../../output.css" rel="stylesheet" />
   </head>
   <body
-    class="bg-stone-50 text-stone-800 font-['Plus_Jakarta_Sans'] antialiased overflow-hidden selection:bg-amber-200"
+    class="bg-stone-50 text-white font-['Plus_Jakarta_Sans'] antialiased overflow-hidden selection:bg-amber-200"
   >
     <!-- Audio Element (Tanpa autoplay di HTML agar mematuhi kebijakan browser & kontrol penuh via JS) -->
     <audio id="bg-music" loop preload="auto">
@@ -52,6 +52,8 @@
        COVER / LOCKED SCREEN (Animasi Slide ke Atas saat dibuka)
        ========================================================= -->
     <section
+      data-cover="slide-up"
+      data-durasi-buka="900"
       id="cover-overlay"
       class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-900 text-stone-100 px-6 text-center transition-transform duration-1000 ease-in-out"
     >
@@ -95,7 +97,7 @@
 
         <div class="pt-3">
           <button
-            id="open-invitation-btn"
+            data-buka-undangan
             class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-amber-100 text-stone-900 text-sm sm:text-sm font-medium tracking-wider hover:bg-white transition-all duration-300 shadow-xl cursor-pointer"
           >
             <svg
@@ -126,7 +128,7 @@
     >
       <!-- Hero Section dengan Background Tag <img> -->
       <header
-        class="relative h-100svh flex flex-col items-center justify-center pb-50 text-center overflow-hidden border-b border-stone-200/60 px-10 sm:px-14"
+        class="relative min-h-svh flex flex-col items-center justify-center pb-50 text-center overflow-hidden border-b border-stone-200/60 px-10 sm:px-14"
       >
         <!-- Foto Mempelai sebagai Background -->
         <img
@@ -176,40 +178,129 @@
       </header>
 
       <!-- Salam & Mempelai Section -->
-      <section class="py-16 px-6 text-center space-y-10">
-        <div class="max-w-md mx-auto space-y-3">
-          <p class="font-['Playfair_Display'] italic text-lg text-stone-700">
-            Salam Sejahtera,
+
+      <section
+        class="min-h-svh flex flex-col items-center justify-center pb-20 py-12 px-6 text-center space-y-8 bg-white"
+      >
+        <!-- Salam Pembuka Islami -->
+        <div class="max-w-md mx-auto space-y-2.5">
+          <p
+            data-animasi="fade-down"
+            class="font-['Playfair_Display'] italic text-lg sm:text-xl text-amber-800"
+          >
+            Assalamu&rsquo;alaikum Warahmatullahi Wabarakatuh
           </p>
-          <p class="text-sm leading-relaxed text-stone-600">
-            Tanpa mengurangi rasa hormat, kami bermaksud mengundang
+          <p
+            data-animasi="fade-up"
+            class="text-xs sm:text-sm leading-relaxed text-stone-600"
+          >
+            Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
             Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:
           </p>
         </div>
 
-        <div class="space-y-8">
-          <!-- Mempelai Wanita -->
-          <div class="space-y-1.5">
-            <h3 class="font-wedding text-5xl sm:text-4xl text-stone-800">
-              Putri Restu Rahayu
-            </h3>
-            <p class="font-['playfair_Display'] text-sm text-stone-500">
-              Putri Pertama dari Bpk. Slamet Nugroho &amp; Ibu Wahyuni Rahayu
-            </p>
+        <!-- Data Kedua Mempelai -->
+        <div class="space-y-7 w-full max-w-md mx-auto">
+          <!-- Mempelai Pria -->
+          <div class="flex flex-col items-center space-y-2.5">
+            <!-- Foto Mempelai Pria (Lingkaran Penuh) -->
+            <div
+              data-animasi="zoom-in"
+              class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 border-2 border-amber-300/80 shadow-sm overflow-hidden"
+            >
+              <img
+                src="./assets/groom.jpg"
+                alt="Foto Mempelai Pria"
+                class="w-full h-full object-cover object-center rounded-full"
+              />
+            </div>
+
+            <div class="space-y-1">
+              <h3
+                class="font-['Playfair_Display'] text-2xl sm:text-3xl text-stone-800"
+              >
+                Romeo Montague, S.Kom
+              </h3>
+              <p class="text-xs text-stone-500">
+                Putra Pertama dari Bpk. Arthur Montague &amp; Ibu Eleanor
+              </p>
+            </div>
+
+            <!-- Link Instagram Mempelai Pria -->
+            <a
+              href="https://instagram.com/username_pria"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-stone-100 border border-stone-200/80 text-stone-700 text-xs hover:bg-amber-50 hover:border-amber-300 hover:text-amber-800 transition-colors duration-300"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <span>@romeomontague</span>
+            </a>
           </div>
 
+          <!-- Pemisah Simbol & -->
           <div class="font-['Playfair_Display'] italic text-2xl text-amber-700">
             &amp;
           </div>
 
-          <!-- Mempelai Pria -->
-          <div class="space-y-1.5">
-            <h3 class="font-wedding text-5xl sm:text-4xl text-stone-800">
-              Rangga Aditya
-            </h3>
-            <p class="text-xs text-stone-500">
-              Putra Kedua dari Bpk. Heru Ferdinand &amp; Ibu Clara Sinta
-            </p>
+          <!-- Mempelai Wanita -->
+          <div class="flex flex-col items-center space-y-2.5">
+            <!-- Foto Mempelai Wanita (Lingkaran Penuh) -->
+            <div
+              class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 border-2 border-amber-300/80 shadow-sm overflow-hidden"
+            >
+              <img
+                src="./assets/bride.jpg"
+                alt="Foto Mempelai Wanita"
+                class="w-full h-full object-cover object-center rounded-full"
+              />
+            </div>
+
+            <div class="space-y-1">
+              <h3
+                class="font-['Playfair_Display'] text-2xl sm:text-3xl text-stone-800"
+              >
+                Juliet Capulet, S.Ds
+              </h3>
+              <p class="text-xs text-stone-500">
+                Putri Kedua dari Bpk. Henry Capulet &amp; Ibu Clara
+              </p>
+            </div>
+
+            <!-- Link Instagram Mempelai Wanita -->
+            <a
+              href="https://instagram.com/username_wanita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-stone-100 border border-stone-200/80 text-stone-700 text-xs hover:bg-amber-50 hover:border-amber-300 hover:text-amber-800 transition-colors duration-300"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <span>@julietcapulet</span>
+            </a>
           </div>
         </div>
       </section>
@@ -217,7 +308,7 @@
       <hr class="border-stone-200/70 mx-8" />
 
       <!-- Detail Acara Section -->
-      <section class="py-16 px-6 text-center space-y-8">
+      <section class="min-h-svh py-16 px-6 text-center space-y-8">
         <div>
           <p class="text-xs uppercase tracking-[0.25em] text-stone-400 mb-1">
             Save The Date
@@ -299,7 +390,7 @@
 
       <!-- Footer -->
       <footer
-        class="py-12 px-6 text-center bg-stone-900 text-stone-400 space-y-3"
+        class="min-h-svh py-12 px-6 text-center bg-stone-900 text-stone-400 space-y-3"
       >
         <p class="text-xs leading-relaxed max-w-sm mx-auto">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
@@ -313,6 +404,7 @@
 
     <!-- External JavaScript -->
     <script src="../basic/js/script.js"></script>
+    <script src="../../../dist/js/basic-animasi.js"></script>
     <script src="../../../dist/js/countdown.js"></script>
   </body>
 </html>

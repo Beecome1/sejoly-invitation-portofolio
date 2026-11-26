@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wedding of Ahmad & Fatimah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../../dist/output.css" />
+  </head>
+  <body
+    class="bg-stone-50 text-white font-['Plus_Jakarta_Sans'] antialiased overflow-hidden selection:bg-amber-200"
+    id="body-utama"
+  >
+    <!-- <sejoly-audio
+      id="audio-undangan"
+      src="./assets/audio/As Tears Go By.mp3"
+      icon-pause="../../../assets/img/pause-fill.svg"
+      icon-play="../../../assets/img/hourglass-split.svg"
+    >
+    </sejoly-audio> -->
+
+    <!-- 1. SECTION SAMPUL (COVER LOCK) -->
+    <section
+      id="section-sampul"
+      class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-900 px-6 text-center transition-all duration-1000"
+    >
+      <div
+        class="absolute inset-4 rounded-2xl border border-gold/40 pointer-events-none"
+      ></div>
+
+      <p class="mb-4 text-xs uppercase tracking-[0.3em] text-amber-300">
+        The Wedding of
+      </p>
+
+      <!-- Foto Mempelai Lingkaran di Tengah -->
+      <div class="relative mb-6 h-56 w-56 p-1.5 shadow-xl">
+        <img
+          id="foto-sampul"
+          src=""
+          alt="Foto Sampul Mempelai"
+          class="h-full w-full rounded-full object-cover"
+        />
+      </div>
+
+      <h1
+        id="sampul-nama-mempelai"
+        class="font-wedding text-5xl font-semibold text-white sm:text-5xl"
+      >
+        Ahmad & Fatimah
+      </h1>
+
+      <div class="mt-6 rounded-2xl px-6 py-4 backdrop-blur-xs">
+        <p class="text-xs text-white">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+        <p
+          id="nama-tamu"
+          class="mt-5 text-2xl font-bold font-serif text-amber-300"
+        >
+          Tamu Undangan
+        </p>
+      </div>
+
+      <button
+        id="btn-buka-undangan"
+        class="mt-8 rounded-full bg-gold px-8 py-3 text-sm font-medium tracking-wider text-ivory shadow-md transition hover:bg-gold-dark active:scale-95"
+      >
+        Buka Undangan
+      </button>
+    </section>
+
+    <!-- 2. SECTION HERO (DENGAN TAG IMG) -->
+    <section
+      id="section-hero"
+      class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pb-50 text-center"
+    >
+      <img
+        id="foto-hero"
+        src=""
+        alt="Background Hero Mempelai"
+        class="absolute inset-0 -z-20 h-full w-full object-cover object-[35%_20%] brightness-30 md:object-center"
+      />
+      <div class="absolute inset-0 -z-10"></div>
+
+      <div class="reveal max-w-lg">
+        <p class="text-xs uppercase tracking-[0.3em] text-amber-300">
+          We are getting married
+        </p>
+        <h2
+          id="hero-nama-mempelai"
+          class="mt-12 text-5xl font-wedding text-white sm:text-6xl"
+        >
+          Ahmad & Fatimah
+        </h2>
+
+        <blockquote
+          class="mt-8 rounded-2xl p-6 text-sm italic leading-relaxed text-white shadow-xs"
+        >
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+          kasih dan sayang."
+          <span class="mt-2 block font-semibold not-italic text-amber-300"
+            >(QS. Ar-Rum: 21)</span
+          >
+        </blockquote>
+      </div>
+      <p
+        id="hero-tanggal"
+        class="mt-3 text-sm font-medium tracking-widest uppercase text-white"
+      >
+        Sabtu, 09 Januari 2027
+      </p>
+      <!-- Komponen Web Component Countdown -->
+      <sejoly-countdown
+        date="2027-01-09T09:00:00+07:00"
+        class="max-w-sm mx-auto mt-10"
+      ></sejoly-countdown>
+    </section>
+
+    <!-- 3. SECTION UCAPAN ISLAMI & AYAT -->
+    <section id="section-salam" class="bg-ivory-dark px-6 py-16 text-center">
+      <div class="reveal mx-auto max-w-2xl">
+        <p class="font-serif text-2xl font-semibold text-black">
+          بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+        </p>
+        <p class="mt-3 font-serif text-lg italic text-black">
+          Assalamu’alaikum Warahmatullahi Wabarakatuh
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-black">
+          Maha Suci Allah SWT yang telah menciptakan makhluk-Nya
+          berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih
+          sayang yang Kau ciptakan di antara putra-putri kami:
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. SECTION PROFIL MEMPELAI -->
+    <section id="section-mempelai" class="bg-ivory px-6 py-20 text-center">
+      <div class="mx-auto grid max-w-4xl gap-12 md:grid-cols-2">
+        <!-- Mempelai Pria -->
+        <div class="reveal flex flex-col items-center">
+          <div class="h-48 w-48 overflow-hidden">
+            <img
+              id="foto-pria"
+              src=""
+              alt="Mempelai Pria"
+              class="h-full w-full rounded-t-full object-cover"
+            />
+          </div>
+          <h3
+            id="nama-wanita"
+            class="mt-5 font-wedding text-4xl font-semibold text-gold-dark"
+          >
+            Fatimah Putri
+          </h3>
+          <p
+            id="ortu-wanita"
+            class="mt-2 text-sm leading-relaxed text-charcoal/80"
+          >
+            Putri Pertama dari Bapak H. Ridwan Kamil & Ibu Hj. Siti Aminah
+          </p>
+          <a
+            id="ig-wanita"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-xs font-medium text-ivory shadow-sm transition hover:bg-neutral-800 hover:scale-105 active:scale-95"
+          >
+            <svg
+              class="h-3.5 w-3.5 fill-current text-gold"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+            <span id="ig-wanita-text">@fatimahazzahra</span>
+          </a>
+        </div>
+
+        <!-- Mempelai Wanita -->
+        <div class="reveal flex flex-col items-center">
+          <div class="h-48 w-48 overflow-hidden">
+            <img
+              id="foto-wanita"
+              src=""
+              alt="Mempelai Wanita"
+              class="h-full w-full rounded-t-full object-cover"
+            />
+          </div>
+          <h3
+            id="nama-pria"
+            class="mt-5 font-wedding text-4xl font-semibold text-gold-dark"
+          >
+            Ahmad Fauzan
+          </h3>
+          <p
+            id="ortu-pria"
+            class="mt-2 text-sm leading-relaxed text-charcoal/80"
+          >
+            Putra Kedua dari Bapak H. Abdullah & Ibu Hj. Khadijah
+          </p>
+          <a
+            id="ig-pria"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-xs font-medium text-ivory shadow-sm transition hover:bg-neutral-800 hover:scale-105 active:scale-95"
+          >
+            <svg
+              class="h-3.5 w-3.5 fill-current text-gold"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+            <span id="ig-pria-text">@ahmadfauzan</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="mx-auto mt-16 flex max-w-xs items-center justify-center gap-3"
+      >
+        <span
+          class="h-px flex-1 bg-linear-to-r from-transparent to-gold/60"
+        ></span>
+        <span class="h-2 w-2 rotate-45 border border-gold bg-ivory"></span>
+        <span
+          class="h-px flex-1 bg-linear-to-l from-transparent to-gold/60"
+        ></span>
+      </div>
+    </section>
+
+    <!-- 5. SECTION ACARA -->
+    <section id="section-acara" class="bg-ivory px-6 py-20 text-center">
+      <div class="reveal mx-auto max-w-3xl">
+        <h2 class="font-serif text-3xl font-semibold text-gold-dark">
+          Rangkaian Acara
+        </h2>
+        <p class="mt-2 text-xs text-black">
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+          menyelenggarakan acara pada:
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <!-- Kartu Akad Nikah -->
+          <div
+            class="rounded-2xl border border-gold/40 bg-ivory-dark p-6 shadow-xs"
+          >
+            <h3 class="font-serif text-2xl font-semibold text-gold-dark">
+              Akad Nikah
+            </h3>
+            <div class="mx-auto my-3 h-px w-16 bg-gold/40"></div>
+            <p
+              id="akad-tanggal"
+              class="text-sm font-semibold text-charcoal"
+            ></p>
+            <p
+              id="akad-waktu"
+              class="mt-1 text-sm font-medium text-gold-dark"
+            ></p>
+            <p
+              id="akad-lokasi"
+              class="mt-3 text-lg leading-relaxed text-charcoal/80"
+            >
+              Masjid Agung Al-Barkah, Bekasi
+            </p>
+          </div>
+
+          <!-- Kartu Resepsi -->
+          <div
+            class="rounded-2xl border border-gold/40 bg-ivory-dark p-6 shadow-xs"
+          >
+            <h3 class="font-serif text-2xl font-semibold text-gold-dark">
+              Resepsi
+            </h3>
+            <div class="mx-auto my-3 h-px w-16 bg-gold/40"></div>
+            <p
+              id="resepsi-tanggal"
+              class="text-sm font-semibold text-charcoal"
+            ></p>
+            <p
+              id="resepsi-waktu"
+              class="mt-1 text-sm font-medium text-gold-dark"
+            >
+              Pukul 11.00 - 14.00 WIB
+            </p>
+            <p
+              id="resepsi-lokasi"
+              class="mt-3 text-lg leading-relaxed text-charcoal/80"
+            >
+              Grand Ballroom Hotel Horison, Bekasi
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION AMPLOP DIGITAL -->
+    <section id="section-amplop" class="bg-ivory-dark px-6 py-20 text-center">
+      <div class="reveal mx-auto max-w-xl">
+        <h2 class="font-serif text-3xl font-semibold text-gold-dark">
+          Tanda Kasih
+        </h2>
+        <p class="mt-3 text-xs leading-relaxed text-charcoal/80">
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun
+          jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado
+          secara cashless.
+        </p>
+
+        <!-- Kontainer Kartu Rekening (Tersembunyi di Awal) -->
+        <div
+          id="wadah-amplop"
+          class="mt-8 space-y-4 transition-all duration-500"
+        >
+          <!-- Kartu Bank 1 -->
+          <div
+            class="rounded-2xl border border-gold/40 bg-ivory p-6 text-left shadow-sm"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                id="bank-1-nama"
+                class="font-serif text-xl font-bold text-gold-dark"
+                >Bank Syariah Indonesia (BSI)</span
+              >
+              <span
+                class="rounded-md bg-gold/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold-dark"
+                >Transfer</span
+              >
+            </div>
+            <p
+              id="bank-1-norek"
+              class="mt-4 font-mono text-lg font-semibold tracking-wider text-charcoal"
+            >
+              7123456789
+            </p>
+            <p id="bank-1-an" class="mt-1 text-xs text-charcoal/70">
+              a.n. Ahmad Fauzan
+            </p>
+            <button
+              type="button"
+              data-copy-target="bank-1-norek"
+              class="btn-copy mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gold px-4 py-2 text-xs font-medium text-ivory transition hover:bg-gold-dark active:scale-95"
+            >
+              Salin No. Rekening
+            </button>
+          </div>
+
+          <!-- Kartu Bank 2 -->
+          <div
+            class="rounded-2xl border border-gold/40 bg-ivory p-6 text-left shadow-sm"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                id="bank-2-nama"
+                class="font-serif text-xl font-bold text-gold-dark"
+                >Bank BCA</span
+              >
+              <span
+                class="rounded-md bg-gold/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold-dark"
+                >Transfer</span
+              >
+            </div>
+            <p
+              id="bank-2-norek"
+              class="mt-4 font-mono text-lg font-semibold tracking-wider text-charcoal"
+            >
+              8890123456
+            </p>
+            <p id="bank-2-an" class="mt-1 text-xs text-charcoal/70">
+              a.n. Fatimah Az-Zahra
+            </p>
+            <button
+              type="button"
+              data-copy-target="bank-2-norek"
+              class="btn-copy mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gold px-4 py-2 text-xs font-medium text-ivory transition hover:bg-gold-dark active:scale-95"
+            >
+              Salin No. Rekening
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECTION RSVP & UCAPAN -->
+    <section id="section-rsvp" class="bg-stone-900 px-6 py-20">
+      <div class="reveal mx-auto max-w-xl">
+        <h2 class="text-center font-serif text-3xl font-semibold text-white">
+          Konfirmasi Kehadiran
+        </h2>
+
+        <form
+          id="form-rsvp"
+          class="mt-8 space-y-4 rounded-2xl border border-gold/40 bg-ivory-dark p-6"
+        >
+          <div>
+            <label class="block text-xs font-medium text-charcoal"
+              >Nama Lengkap</label
+            >
+            <input
+              type="text"
+              id="input-nama"
+              required
+              class="mt-1 w-full rounded-xl border border-gold/40 bg-ivory px-4 py-2.5 text-sm focus:border-gold focus:outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-charcoal"
+              >Kehadiran</label
+            >
+            <select
+              id="input-kehadiran"
+              class="mt-1 w-full rounded-xl border border-gold/40 bg-ivory px-4 py-2.5 text-sm focus:border-gold focus:outline-none"
+            >
+              <option value="Hadir">InsyaAllah Hadir</option>
+              <option value="Tidak Hadir">Maaf, Belum Bisa Hadir</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-charcoal"
+              >Ucapan & Doa Restu</label
+            >
+            <textarea
+              id="input-ucapan"
+              rows="3"
+              required
+              class="mt-1 w-full rounded-xl border border-gold/40 bg-ivory px-4 py-2.5 text-sm focus:border-gold focus:outline-none"
+              placeholder="Barakallahu lakuma..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-gold py-3 text-sm font-medium text-ivory transition hover:bg-gold-dark"
+          >
+            Kirim Ucapan
+          </button>
+        </form>
+
+        <div id="daftar-ucapan" class="mt-8 space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- 7. SECTION PENUTUP -->
+    <section id="section-penutup" class="bg-ivory-dark px-6 py-14 text-center">
+      <div class="reveal mx-auto max-w-lg">
+        <p class="text-xs leading-relaxed text-charcoal/80">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada
+          kedua mempelai.
+        </p>
+        <p class="mt-4 font-serif text-base italic text-black">
+          Wassalamu’alaikum Warahmatullahi Wabarakatuh
+        </p>
+        <h4
+          id="penutup-nama-mempelai"
+          class="mt-6 font-wedding text-2xl font-bold text-charcoal"
+        >
+          Ahmad & Fatimah
+        </h4>
+      </div>
+    </section>
+
+    <!-- MODULAR JAVASCRIPT -->
+    <script type="module" src="./js/utilitas.js"></script>
+    <script type="module" src="./js/data-undangan.js"></script>
+    <script type="module" src="../../../dist/js/countdown.js"></script>
+    <script type="module" src="./js/audio.js"></script>
+    <script type="module" src="./js/animasi.js"></script>
+    <script type="module" src="./js/rsvp.js"></script>
+  </body>
+</html>
