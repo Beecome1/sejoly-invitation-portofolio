@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Sembunyikan kartu yang kategorinya tidak cocok dengan filter aktif pada #catalog-grid */
 #catalog-grid[data-active-filter="basic"]
   .catalog-card:not([data-category="basic"]),

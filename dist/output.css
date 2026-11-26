@@ -1709,6 +1709,10 @@
     }
   }
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 #catalog-grid[data-active-filter="basic"] .catalog-card:not([data-category="basic"]), #catalog-grid[data-active-filter="floral"] .catalog-card:not([data-category="floral"]), #catalog-grid[data-active-filter="minimalis"] .catalog-card:not([data-category="minimalis"]) {
   display: none;
 }
