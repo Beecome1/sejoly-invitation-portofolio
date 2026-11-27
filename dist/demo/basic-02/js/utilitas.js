@@ -1,15 +1,25 @@
 export function ambilNamaTamu() {
   const params = new URLSearchParams(window.location.search);
   const tamu = params.get("to");
-  if (tamu) {
-    const elTamu = document.getElementById("nama-tamu");
-    if (elTamu) elTamu.textContent = tamu;
+  if (!tamu) return;
 
-    const inputNama = document.getElementById("input-nama");
-    if (inputNama) inputNama.value = tamu;
+  const namaBersih = tamu.trim();
+
+  // 1. Tampilkan di teks sampul (cover)
+  const elTamu = document.getElementById("nama-tamu");
+  if (elTamu) elTamu.textContent = namaBersih;
+
+  // 2. Otomatis isi kolom input nama pada Form RSVP (mendukung berbagai variasi ID/name)
+  const inputRsvp =
+    document.getElementById("rsvp-nama") ||
+    document.getElementById("input-nama") ||
+    document.querySelector('#form-rsvp input[name="nama"]') ||
+    document.querySelector('form input[type="text"]');
+
+  if (inputRsvp) {
+    inputRsvp.value = namaBersih;
   }
 }
-
 export function initBukaUndangan() {
   const btnBuka = document.getElementById("btn-buka-undangan");
   const sampul = document.getElementById("section-sampul");

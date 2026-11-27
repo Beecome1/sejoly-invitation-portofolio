@@ -23,10 +23,20 @@ export const DATA_UNDANGAN = {
   },
   acara: {
     akadWaktu: "Sabtu, 09 Januari 2027 • 09.00 WIB",
-    akadLokasi: "Masjid Agung Al-Barkah, Bekasi",
+    akadLokasi: "Hotel Santika Premiere Slipi, Jakarta",
     resepsiWaktu: "Sabtu, 09 Januari 2027 • 11.00 - 14.00 WIB",
-    resepsiLokasi: "Grand Ballroom Hotel Horison, Bekasi",
+    resepsiLokasi: "Hotel Santika Premiere Slipi, Jakarta",
   },
+
+  lokasi: {
+    namaTempat: "Hotel Santika Premiere Slipi, Jakarta",
+    alamat:
+      "Jl. K.S. Tubun No.7, RT.1/RW.7, Slipi, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11410",
+    embedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1222073449103!2d106.992416!3d-6.247622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c2d8f8b5b5b%3A0x5b5b5b5b5b5b5b5b!2sBekasi!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid",
+    linkArah: "https://maps.app.goo.gl/contohLinkLokasi",
+  },
+
   amplop: [
     {
       bank: "Bank Syariah Indonesia (BSI)",
@@ -108,6 +118,22 @@ function renderData() {
   setText("resepsi-tanggal", DATA_UNDANGAN.acara.resepsiTanggal);
   setText("resepsi-waktu", DATA_UNDANGAN.acara.resepsiWaktu);
   setText("resepsi-lokasi", DATA_UNDANGAN.acara.resepsiLokasi);
+
+  // Data Lokasi Maps
+  if (DATA_UNDANGAN.lokasi) {
+    setText("lokasi-nama-tempat", DATA_UNDANGAN.lokasi.namaTempat);
+    setText("lokasi-alamat-lengkap", DATA_UNDANGAN.lokasi.alamat);
+
+    const iframeMaps = document.getElementById("maps-embed");
+    if (iframeMaps && DATA_UNDANGAN.lokasi.embedUrl) {
+      iframeMaps.src = DATA_UNDANGAN.lokasi.embedUrl;
+    }
+
+    const linkMaps = document.getElementById("maps-link-arah");
+    if (linkMaps && DATA_UNDANGAN.lokasi.linkArah) {
+      linkMaps.href = DATA_UNDANGAN.lokasi.linkArah;
+    }
+  }
 
   // Data Amplop Digital
   DATA_UNDANGAN.amplop.forEach((item, index) => {
